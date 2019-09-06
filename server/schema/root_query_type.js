@@ -4,7 +4,7 @@ const { GraphQLObjectType, GraphQLList, GraphQLID, GraphQLNonNull } = graphql;
 const CountryType = require("./country_type");
 const PassportAccessType = require("./passport_access_type");
 const Country = mongoose.model("country");
-const PassportAccess = mongoose.model("passport_acces");
+const PassportAccess = mongoose.model("passport_access");
 
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",

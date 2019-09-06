@@ -1,8 +1,10 @@
 const express = require("express");
 const expressGraphQL = require("express-graphql");
 const bodyParser = require("body-parser");
+const models = require("./models");
 const mongoose = require("mongoose");
 const keys = require("./config/keys");
+const schema = require("./schema/schema");
 
 mongoose.Promise = global.Promise;
 mongoose.connect(keys.MONGO_URI, {
@@ -20,7 +22,7 @@ app.use(bodyParser.json());
 app.use(
   "/graphql",
   expressGraphQL({
-    //schema,
+    schema,
     graphiql: true
   })
 );
