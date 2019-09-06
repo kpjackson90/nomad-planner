@@ -1,5 +1,5 @@
 if (process.env.NODE === "production") {
-  module.export = require("./prod");
+  module.exports = require("./prod");
 } else {
-  module.export = require("./dev");
+  module.exports = require("./dev");
 }
